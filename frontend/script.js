@@ -30,3 +30,12 @@ function login(){
     const senha = document.getElementById('senha');
     })
 }
+
+function mostrar_cadastro() {
+    tela_cadastro.classList.remove('oculto');
+    tela_login.classList.add('oculto');
+}
+function mostrar_login() {
+    tela_login.classList.remove('oculto');
+    tela_cadastro.classList.add('oculto');
+}
