@@ -15,7 +15,7 @@ function cadastro() {
         alert("Email inválido")
         return;
 
-    } else if (senha.length > 8){
+    } else if (senha.length < 8){
         alert("A senha precisa de no mínimo 8 caracteres")
         return;
     }
