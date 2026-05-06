@@ -1,18 +1,55 @@
 body {
-    background-color: rgb(109, 224, 224);
+    background-color: #558bdb;
+    font-family: Arial, sans-serif;
 }
 
-#cadastro{
-    border: 2px solid black;
-    border-radius: 6px;
-    padding: 6px;
-    text-align: center;
-    background-color: rgb(170, 249, 252);
+.oculto {
+    display: none;
 }
+
+#cadastro {
+    max-width: 320px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #aaf9fc;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+
 #formCadastro input {
-    width: 250px;
-    padding: 5px;
-    border: 3px solid darkblue;
-    border-radius: 7px;
+    width: 100%;
+    max-width: 260px;
+    padding: 6px;
+    margin: 5px 0;
     font-size: 16px;
+    border: 2px solid darkblue;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#bo_cadastro,
+#bo_login {
+    padding: 8px 12px;
+    font-size: 15px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: 0.2s;
+}
+
+#bo_cadastro:hover,
+#bo_login:hover {
+    background-color: #ddd;
+}
+#formLogin input {
+    width: 100%;
+    max-width: 260px;
+    padding: 6px;
+    margin: 5px 0;
+    font-size: 16px;
+    border: 2px solid darkblue;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
