@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(109, 224, 224);
+}
+
+#cadastro{
+    border: 2px solid black;
+    border-radius: 6px;
+    padding: 6px;
+    text-align: center;
+    background-color: rgb(170, 249, 252);
+}
+#formCadastro input {
+    width: 250px;
+    padding: 5px;
+    border: 3px solid darkblue;
+    border-radius: 7px;
+    font-size: 16px;
+}
