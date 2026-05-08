@@ -1,3 +1,4 @@
+const tela_inicial = document.getElementById('tela_inicial');
 const tela_cadastro = document.getElementById('cadastro');
 const tela_login = document.getElementById('login');
 
@@ -32,10 +33,17 @@ function login(){
 }
 
 function mostrar_cadastro() {
+    tela_inicial.classList.add('oculto');
     tela_cadastro.classList.remove('oculto');
     tela_login.classList.add('oculto');
 }
 function mostrar_login() {
+    tela_inicial.classList.add('oculto');
     tela_login.classList.remove('oculto');
+    tela_cadastro.classList.add('oculto');
+}
+function mostrar_tela_ini() {
+    tela_inicial.classList.remove('oculto');
+    tela_login.classList.add('oculto');
     tela_cadastro.classList.add('oculto');
 }
