@@ -12,6 +12,8 @@ body {
 
 #tela_inicial {
     margin-top: 80px;
+    border: 2px solid;
+    border-radius: 10px;
 }
 
 #cadastro,
