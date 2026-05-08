@@ -3,13 +3,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .oculto {
     display: none;
 }
 
-#cadastro {
+#tela_inicial {
+    margin-top: 80px;
+}
+
+#cadastro,
+#login {
     max-width: 340px;
     margin: 40px auto;
     padding: 20px;
@@ -41,7 +47,9 @@ body {
 }
 
 #bo_cadastro,
-#bo_login {
+#bo_login,
+.b_login,
+.b_cadastro {
     padding: 10px 14px;
     font-size: 15px;
     border: 2px solid #000;
@@ -50,19 +58,20 @@ body {
     background-color: #ffffff;
     transition: 0.2s ease;
     margin-top: 8px;
+    color: #0b5ed7;
 }
 
 #bo_cadastro:hover,
-#bo_login:hover {
+#bo_login:hover,
+.b_login:hover,
+.b_cadastro:hover {
     background-color: #e6e6e6;
     transform: translateY(-1px);
 }
 
 #bo_cadastro:active,
-#bo_login:active {
+#bo_login:active,
+.b_login:active,
+.b_cadastro:active {
     transform: translateY(0);
-}
-.b_cadastro,
-.b_login {
-    color: #0b5ed7;
 }
