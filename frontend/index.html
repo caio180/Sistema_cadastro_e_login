@@ -7,8 +7,13 @@
     <title>Sistema de cadastro e login</title>
 </head>
 <body>
-  <button onclick="mostrar_login()">login</button>
-  <button  onclick="mostrar_cadastro()">cadastro</button>
+  <div id="tela_inicial">
+    <h1>Bem vindo ao Sistema de cadastro e login</h1>
+    
+    <button class="b_login" onclick="mostrar_login()">login</button>
+    <button class="b_cadastro" onclick="mostrar_cadastro()">cadastro</button>
+  </div> 
+  
    <div id="cadastro" class="oculto"> 
     <form id="formCadastro">
         <input type="text" id="nome" placeholder="nome"> <br></br>
@@ -17,16 +22,16 @@
         <input type="password" id="confirmar_senha" placeholder="confirme sua senha"> <br></br>
         <button type="submit" id="bo_cadastro">Cadastrar-se</button> 
       </form>
-      <button onclick="mostrar_login()">login</button>
+      <button class="b_login" onclick="mostrar_login()">login</button>
   </div>  
 
   <div id="login" class="oculto">
     <form id="formLogin">
-        <input type="email" id="email" placeholder="email"> <br></br>
-        <input type="password" id="senha" placeholder="senha"> 
+        <input type="email" id="email_login" placeholder="email"> <br></br>
+        <input type="password" id="senha_login" placeholder="senha"> 
         <button type="submit" id="bo_login">Entrar</button>
       </form>
-      <button onclick="mostrar_cadastro()">cadastro</button>
+      <button class="b_cadastro" onclick="mostrar_cadastro()">cadastro</button>
     </div>
     <script src="script.js" defer></script>
 
