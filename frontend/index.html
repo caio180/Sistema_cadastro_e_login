@@ -1,39 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema de cadastro e login</title>
-</head>
-<body>
-  <div id="tela_inicial">
-    <h1>Bem vindo ao Sistema de cadastro e login</h1>
-    
-    <button class="b_login" onclick="mostrar_login()">login</button>
-    <button class="b_cadastro" onclick="mostrar_cadastro()">cadastro</button>
-  </div> 
-  
-   <div id="cadastro" class="oculto"> 
-    <form id="formCadastro">
-        <input type="text" id="nome" placeholder="nome"> <br></br>
-        <input type="email" id="email" placeholder="email"> <br></br>
-        <input type="password" id="senha" placeholder="senha"> <br></br>
-        <input type="password" id="confirmar_senha" placeholder="confirme sua senha"> <br></br>
-        <button type="submit" id="bo_cadastro">Cadastrar-se</button> 
-      </form>
-      <button class="b_login" onclick="mostrar_login()">login</button>
-  </div>  
-
-  <div id="login" class="oculto">
-    <form id="formLogin">
-        <input type="email" id="email_login" placeholder="email"> <br></br>
-        <input type="password" id="senha_login" placeholder="senha"> 
-        <button type="submit" id="bo_login">Entrar</button>
-      </form>
-      <button class="b_cadastro" onclick="mostrar_cadastro()">cadastro</button>
-    </div>
-    <script src="script.js" defer></script>
-
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
