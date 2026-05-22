@@ -4,7 +4,7 @@ function Cadastro(){
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [nome, setNome] = useState("");
-    const [ConfirmSenha, setConfirmsenha] = useState("");
+    const [ConfirmSenha, setConfirmSenha] = useState("");
     const regis_Cadastro = (e) => {
     e.preventDefault()
     
@@ -74,7 +74,7 @@ function Cadastro(){
                     type="password"
                     placeholder="Confime sua senha"
                     value={ConfirmSenha}
-                    onChange={(e) => setConfirmsenha(e.target.value)}
+                    onChange={(e) => setConfirmSenha(e.target.value)}
                 />
 
                 <button id="bo_cadastro" type="submit">
