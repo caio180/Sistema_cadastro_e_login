@@ -34,9 +34,14 @@ function Cadastro(){
             })
             
             .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error(error));
-            console.log("Cadastro realizado")
+    .then(data => {
+        console.log(data);
+        alert("Cadastro realizado com sucesso");
+    })
+    .catch(error => {
+        console.error(error);
+        alert("Erro ao cadastrar");
+    });
         }
     }
     return (<> 
