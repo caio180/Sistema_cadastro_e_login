@@ -3,24 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-.oculto {
-    display: none;
-}
-
-#tela_inicial {
-    margin-top: 80px;
-    border: 2px solid;
-    border-radius: 10px;
 }
 
 #cadastro,
 #login {
-    max-width: 340px;
-    margin: 40px auto;
-    padding: 20px;
+    width: 340px;
+    margin: 60px auto;
+    padding: 25px;
     text-align: center;
     background-color: #aaf9fc;
     border: 2px solid #000;
@@ -28,11 +17,17 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+#formCadastro,
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #formCadastro input,
 #formLogin input {
-    width: 100%;
-    max-width: 280px;
-    padding: 8px;
+    width: 90%;
+    padding: 10px;
     margin: 8px 0;
     font-size: 15px;
     border: 2px solid #1f3a8a;
@@ -53,14 +48,14 @@ body {
 .b_login,
 .b_cadastro {
     padding: 10px 14px;
+    margin-top: 12px;
     font-size: 15px;
     border: 2px solid #000;
     border-radius: 6px;
     cursor: pointer;
-    background-color: #ffffff;
-    transition: 0.2s ease;
-    margin-top: 8px;
+    background-color: white;
     color: #0b5ed7;
+    transition: 0.2s;
 }
 
 #bo_cadastro:hover,
@@ -68,7 +63,7 @@ body {
 .b_login:hover,
 .b_cadastro:hover {
     background-color: #e6e6e6;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 #bo_cadastro:active,
@@ -76,4 +71,9 @@ body {
 .b_login:active,
 .b_cadastro:active {
     transform: translateY(0);
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1f3a8a;
 }
