@@ -4,33 +4,47 @@ function Cadastro(){
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [nome, setNome] = useState("");
-    const [confirm_sen, setConfirmsenha] = useState("");
-    const handleCadastro = (e) => {
-    e.preventDefalt()
+    const [ConfirmSenha, setConfirmsenha] = useState("");
+    const regis_Cadastro = (e) => {
+    e.preventDefault()
     
-        if (nome === '' || email === '' || senha === '' || confirm_sen === ''){
+        if (nome === '' || email === '' || senha === '' || ConfirmSenha === ''){
             alert("Preencha todos os campos")
-            return;
-        }if (!email.includes("@")){
+        }else if (!email.includes("@")){
             alert("Email inválido")
-            return;
 
-        }if (senha.length < 8){
+        }else if (senha.length < 8){
             alert("A senha precisa de no mínimo 8 caracteres")
-            return;
-        }if (senha !== confirm_sen){
+        }else if (senha !== ConfirmSenha){
             alert("As senhas não coincidem")
-            return
         }
-    };
-    
+        else{
 
+            fetch('http://localhost:3000/cadastro', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    nome: nome,
+                    email: email,
+                    senha: senha
+                    
+                })
+            })
+            
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+            console.log("Cadastro realizado")
+        }
+    }
     return (<> 
     
         <div id="cadastro">
             <h2>Cadastro</h2>
 
-            <form id="formCadastro" onSubmit={handleCadastro}>
+            <form id="formCadastro" onSubmit={regis_Cadastro}>
                 <input
                     type="text"
                     placeholder="Digite seu nome"
@@ -54,7 +68,7 @@ function Cadastro(){
                 <input
                     type="password"
                     placeholder="Confime sua senha"
-                    value={confirm_sen}
+                    value={ConfirmSenha}
                     onChange={(e) => setConfirmsenha(e.target.value)}
                 />
 
