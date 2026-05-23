@@ -4,18 +4,18 @@ function Cadastro(){
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [nome, setNome] = useState("");
-    const [ConfirmSenha, setConfirmSenha] = useState("");
+    const [confirmSenha, setConfirmSenha] = useState("");
     const regis_Cadastro = (e) => {
     e.preventDefault()
     
-        if (nome === '' || email === '' || senha === '' || ConfirmSenha === ''){
+        if (nome === '' || email === '' || senha === '' || confirmSenha === ''){
             alert("Preencha todos os campos")
         }else if (!email.includes("@")){
             alert("Email inválido")
 
         }else if (senha.length < 8){
             alert("A senha precisa de no mínimo 8 caracteres")
-        }else if (senha !== ConfirmSenha){
+        }else if (senha !== confirmSenha){
             alert("As senhas não coincidem")
         }
         else{
@@ -34,16 +34,20 @@ function Cadastro(){
             })
             
             .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        alert("Cadastro realizado com sucesso");
-    })
-    .catch(error => {
-        console.error(error);
-        alert("Erro ao cadastrar");
-    });
-        }
+            .then(data => {
+                console.log(data);
+                alert("Cadastro realizado com sucesso");
+                 setNome("");
+                 setEmail("");
+                 setSenha("");
+                 setConfirmSenha("");
+            })
+            .catch(error => {
+            console.error(error);
+            alert("Erro ao cadastrar");
+        });
     }
+  }
     return (<> 
     
         <div id="cadastro">
@@ -73,7 +77,7 @@ function Cadastro(){
                 <input
                     type="password"
                     placeholder="Confime sua senha"
-                    value={ConfirmSenha}
+                    value={confirmSenha}
                     onChange={(e) => setConfirmSenha(e.target.value)}
                 />
 
