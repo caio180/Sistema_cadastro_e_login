@@ -12,6 +12,7 @@ app.get('/', (req, res) => {
 })
 app.post('/cadastro', (req, res) =>{
     usuarios.push(req.body)
+    res.json(usuarios)
 })
 app.get('/cadastro', (req, res) =>{
     res.json(usuarios)
