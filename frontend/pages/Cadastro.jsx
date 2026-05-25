@@ -1,4 +1,5 @@
 import { useState } from "react";
+const api = import.meta.env.VITE_API_URL
 
 function Cadastro(){
     const [email, setEmail] = useState("");
@@ -20,7 +21,7 @@ function Cadastro(){
         }
         else{
 
-            fetch('http://localhost:3000/cadastro', {
+            fetch(api, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
